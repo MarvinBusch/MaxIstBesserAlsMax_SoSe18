@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 2b6787c56f415fc4b81ebb6a232bfc23
+timeCreated: 1516146654
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_009
+    100008: Bone_010
+    100010: Bone_011
+    100012: Bone_012
+    100014: Bone_013
+    100016: CHEST
+    100018: Cube
+    100020: Cube_002
+    100022: Cube_003
+    100024: Cube_004
+    100026: Cube_005
+    100028: Cube_006
+    100030: Cube_007
+    100032: Cube_008
+    100034: Cube_009
+    100036: daumem2_L
+    100038: daumem2_R
+    100040: daumen3_L
+    100042: daumen3_R
+    100044: foot_L
+    100046: foot_R
+    100048: hand_L
+    100050: hand_R
+    100052: HEAD
+    100054: HIPS
+    100056: //RootNode
+    100058: lowerarm_L
+    100060: lowerarm_R
+    100062: lowerleg_L
+    100064: lowerleg_R
+    100066: middlefinger2_L
+    100068: middlefinger2_L_001
+    100070: middlefinger2_L_002
+    100072: middlefinger2_L_003
+    100074: middlefinger2_R
+    100076: middlefinger3_L
+    100078: middlefinger3_L_001
+    100080: middlefinger3_L_002
+    100082: middlefinger3_L_003
+    100084: middlefinger3_R
+    100086: NEKC
+    100088: Plane
+    100090: Plane_001
+    100092: SHOULDER_L
+    100094: SHOULDER_R
+    100096: SPINE
+    100098: Upperarm_L
+    100100: Upperarm_R
+    100102: Upperleg_L
+    100104: Upperleg_R
+    100106: zehen_L
+    100108: zehen_R
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_009
+    400008: Bone_010
+    400010: Bone_011
+    400012: Bone_012
+    400014: Bone_013
+    400016: CHEST
+    400018: Cube
+    400020: Cube_002
+    400022: Cube_003
+    400024: Cube_004
+    400026: Cube_005
+    400028: Cube_006
+    400030: Cube_007
+    400032: Cube_008
+    400034: Cube_009
+    400036: daumem2_L
+    400038: daumem2_R
+    400040: daumen3_L
+    400042: daumen3_R
+    400044: foot_L
+    400046: foot_R
+    400048: hand_L
+    400050: hand_R
+    400052: HEAD
+    400054: HIPS
+    400056: //RootNode
+    400058: lowerarm_L
+    400060: lowerarm_R
+    400062: lowerleg_L
+    400064: lowerleg_R
+    400066: middlefinger2_L
+    400068: middlefinger2_L_001
+    400070: middlefinger2_L_002
+    400072: middlefinger2_L_003
+    400074: middlefinger2_R
+    400076: middlefinger3_L
+    400078: middlefinger3_L_001
+    400080: middlefinger3_L_002
+    400082: middlefinger3_L_003
+    400084: middlefinger3_R
+    400086: NEKC
+    400088: Plane
+    400090: Plane_001
+    400092: SHOULDER_L
+    400094: SHOULDER_R
+    400096: SPINE
+    400098: Upperarm_L
+    400100: Upperarm_R
+    400102: Upperleg_L
+    400104: Upperleg_R
+    400106: zehen_L
+    400108: zehen_R
+    2300000: Cube_004
+    2300002: Cube_005
+    2300004: Cube_006
+    2300006: Cube_007
+    2300008: Cube_008
+    2300010: Plane_001
+    3300000: Cube_004
+    3300002: Cube_005
+    3300004: Cube_006
+    3300006: Cube_007
+    3300008: Cube_008
+    3300010: Plane_001
+    4300000: Plane_001
+    4300002: Cube_008
+    4300004: Cube_007
+    4300006: Cube_006
+    4300008: Cube_005
+    4300010: Cube_009
+    4300012: Plane
+    4300014: Cube_004
+    4300016: Cube
+    4300018: Cube_002
+    4300020: Cube_003
+    7400000: Hooman 4
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Cube_002
+    13700004: Cube_003
+    13700006: Cube_009
+    13700008: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Hooman 4
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HIPS
+        weight: 1
+      - path: Armature/HIPS/SPINE
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/NEKC
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/NEKC/HEAD
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009/middlefinger2_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009/middlefinger2_L/middlefinger3_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010/middlefinger2_L_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010/middlefinger2_L_001/middlefinger3_L_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011/middlefinger2_L_002
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011/middlefinger2_L_002/middlefinger3_L_002
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012/daumem2_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012/daumem2_L/daumen3_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013/middlefinger2_L_003
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013/middlefinger2_L_003/middlefinger3_L_003
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone/middlefinger2_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone/middlefinger2_R/middlefinger3_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001/daumem2_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001/daumem2_R/daumen3_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L/foot_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L/foot_L/zehen_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R/foot_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R/foot_R/zehen_R
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: Cube_009
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HIPS
+        weight: 1
+      - path: Armature/HIPS/SPINE
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/NEKC
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/NEKC/HEAD
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009/middlefinger2_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_009/middlefinger2_L/middlefinger3_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010/middlefinger2_L_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_010/middlefinger2_L_001/middlefinger3_L_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011/middlefinger2_L_002
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_011/middlefinger2_L_002/middlefinger3_L_002
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012/daumem2_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_012/daumem2_L/daumen3_L
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013/middlefinger2_L_003
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_L/Upperarm_L/lowerarm_L/hand_L/Bone_013/middlefinger2_L_003/middlefinger3_L_003
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone/middlefinger2_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone/middlefinger2_R/middlefinger3_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001/daumem2_R
+        weight: 1
+      - path: Armature/HIPS/SPINE/CHEST/SHOULDER_R/Upperarm_R/lowerarm_R/hand_R/Bone_001/daumem2_R/daumen3_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L/foot_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_L/lowerleg_L/foot_L/zehen_L
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R/foot_R
+        weight: 1
+      - path: Armature/HIPS/Upperleg_R/lowerleg_R/foot_R/zehen_R
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: Cube_009
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
