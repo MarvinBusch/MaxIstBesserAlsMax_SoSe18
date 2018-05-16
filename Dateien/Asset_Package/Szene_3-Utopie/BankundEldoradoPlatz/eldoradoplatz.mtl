@@ -1,0 +1,143 @@
+# Blender MTL File: 'eldoradoplatz.blend'
+# Material Count: 12
+
+newmtl 01_-_Default
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.480000 0.470588 0.674510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\9500fd090f03b83732af5ca74d6b2bcc.bmp
+
+newmtl 01_-_Default.001
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.480000 0.470588 0.674510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\9500fd090f03b83732af5ca74d6b2bcc.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\9500fd090f03b83732af5ca74d6b2bcc.bmp
+
+newmtl 01_-_Default.002
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.480000 0.470588 0.674510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\9500fd090f03b83732af5ca74d6b2bcc.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\9500fd090f03b83732af5ca74d6b2bcc.bmp
+
+newmtl 07_-_Default
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\Map #5
+map_Kd C:\\Users\\User\\Downloads\\Map #3
+
+newmtl 09_-_Default
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\Map #14
+map_Kd C:\\Users\\User\\Downloads\\Map #13
+
+newmtl Material.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material_#25
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\grey-marble-texture-background-vector-free.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\grey-marble-texture-background-vector-free.bmp
+
+newmtl Material_#26
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.126000 0.126000 0.126000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump -bm 0.070008 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+
+newmtl Material_#26.001
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.126000 0.126000 0.126000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump -bm 0.070008 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+
+newmtl Material_#26.002
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.126000 0.126000 0.126000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump -bm 0.070008 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+
+newmtl Material_#26.003
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.126000 0.126000 0.126000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump -bm 0.070008 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\a1bec44cea337a5c0fc757be47833ce9.bmp
+
+newmtl Material_#27
+Ns 19.607843
+Ka 1.000000 1.000000 1.000000
+Kd 0.470588 0.470588 0.470588
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.042005 C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\hi_res_stone_texture_1_by_syngt.bmp
+map_Kd C:\\Users\\User\\Downloads\\MaxIstBesserAlsMax_SoSe18-master\\Dateien\\Documents\\3D\\stadtanfang\\hi_res_stone_texture_1_by_syngt.bmp
