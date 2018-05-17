@@ -123,9 +123,7 @@ private bool AudioPlay = false;
 			if (MyTime>3f){MenschAnim.enabled = false;}
 			if (MyTime>Audio.GetComponent<AudioSource>().clip.length - 1f){MenschAnim.enabled = true; MenschAnim.speed = 2.5f;}
 			if(MyTime>Audio.GetComponent<AudioSource>().clip.length)
-			{	
-				Application.LoadLevel("Matrix");
-			}
+			{	SaveVariable.SceneChange ("Matrix");}
 		}
 
 	}

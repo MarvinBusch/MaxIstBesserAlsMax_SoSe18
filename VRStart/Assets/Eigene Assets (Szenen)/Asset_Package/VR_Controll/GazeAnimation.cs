@@ -19,7 +19,7 @@ public class GazeAnimation : MonoBehaviour {
 
 		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime < 0 && !GetComponent<Animator>().IsInTransition(0)){GetComponent<Animator>().SetFloat("AnimationSpeed", PlaySpeed);AnimUnderZero = true;}
 
-		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !GetComponent<Animator>().IsInTransition(0)){Application.LoadLevel (sceneName);}
+		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !GetComponent<Animator>().IsInTransition(0)){SaveVariable.SceneChange (sceneName);}
 	}
 	public void LookAtAnimStart(GameObject Fading){
 		if(0>=Fading.GetComponent<Renderer> ().material.GetColor("_Color").a){

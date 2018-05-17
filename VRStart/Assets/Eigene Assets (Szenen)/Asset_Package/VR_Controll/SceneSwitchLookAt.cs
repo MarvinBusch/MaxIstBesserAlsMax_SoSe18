@@ -27,7 +27,7 @@ public class SceneSwitchLookAt : MonoBehaviour {
 			
 			if (MyTime >= Duration)
 			{
-				changeScene(scenename);
+				SaveVariable.SceneChange (scenename);
 			}
 		}
 	}

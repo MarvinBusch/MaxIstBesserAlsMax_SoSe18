@@ -41,15 +41,10 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 			if (ResetMytime==true){
 				if (MyTime>FadeDuration)
 				{
-					changeScene(scenename);
+					SaveVariable.SceneChange (scenename);
 				}
 			}
 	}
-	
-	public void changeScene(string scenename)
-    {
-        Application.LoadLevel(scenename);
-    }
 	
 	void SetAnimationLength(){
 		m_Animator = AnimationObject.GetComponent<Animator>();

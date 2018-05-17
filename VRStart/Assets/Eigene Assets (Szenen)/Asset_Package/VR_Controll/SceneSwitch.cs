@@ -7,6 +7,6 @@ public class SceneSwitch : MonoBehaviour {
 
 	public void changeScene(string scenename)
     {
-        Application.LoadLevel(scenename);
+		SaveVariable.SceneChange(scenename);
     }
 }
