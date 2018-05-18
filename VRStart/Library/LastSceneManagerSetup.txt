@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/BladeRunner.unity
+- path: Assets/Scenes/Interrogation.unity
   isLoaded: 1
   isActive: 1

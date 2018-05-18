@@ -4,6 +4,68 @@ using UnityEngine;
 
 public class Lightcontroll : MonoBehaviour {
 
+	private Vector3[] angles;
+	private int index;
+	private Vector3 centerAngle;
+	public GameObject responsiveObject;
+	public GameObject Camera;
+	public bool Kopf_Eingabe = false;
+
+	void Start(){
+		ResetGesture ();
+	}
+
+	void Update(){
+		if (Kopf_Eingabe == true) {
+			if (index == 0) {ResetGesture ();}
+			angles[index] = Camera.GetComponent<Transform>().eulerAngles;
+			index++;
+			if (index == 60) {
+				CheckMovement ();
+				ResetGesture ();
+				Kopf_Eingabe = false;
+			}
+		}
+	}
+
+
+	void CheckMovement(){
+		bool right = false, left = false, up = false, down = false;
+
+		for (int i = 0; i < 60; i++) {
+			if (angles [i].x < centerAngle.x - 20.0f && !up) {
+				up = true;
+			} else if(angles [i].x > centerAngle.x + 20.0f && !down){
+				down=true;
+			}
+
+			if (angles [i].y < centerAngle.y - 20.0f && !left) {
+				left = true;
+			} else if(angles [i].y > centerAngle.y + 20.0f && !right){
+				right=true;
+			}
+
+			if (left && right && !(up && down)) {
+				Debug.Log ("response = No");
+				responsiveObject.GetComponent<Renderer> ().material.color = Color.red;
+			}
+			if (up && down && !(left && right)) {
+				Debug.Log ("response = Yes");
+				responsiveObject.GetComponent<Renderer> ().material.color = Color.green;
+			}
+		}
+	}
+		
+	void ResetGesture(){
+		angles = new Vector3[60];
+		index = 0;
+		centerAngle = Camera.GetComponent<Transform>().eulerAngles;
+	}
+
+	public void SetEingabeTrue(){
+		Kopf_Eingabe = true;
+	}
+/*
 public float StartTime = 5.0f;
 public float DurationLampe = 5.0f;
 protected float MyTime = 0f;
@@ -136,5 +198,6 @@ private bool AudioPlay = false;
 	}
 	public void DetectDeCollision(){
 		Collides = false;
-	}
+	}*/
+
 }

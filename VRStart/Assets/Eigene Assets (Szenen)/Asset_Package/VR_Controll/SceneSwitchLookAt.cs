@@ -48,9 +48,4 @@ public class SceneSwitchLookAt : MonoBehaviour {
 		MyTime = 0f;
 		//RadialProgress.GetComponent<Image>().fillAmount = MyTime;
 	}
-	
-	public void changeScene(string scenename)
-    {
-        Application.LoadLevel(scenename);
-    }
 }

@@ -9,7 +9,7 @@ public class SaveVariable : MonoBehaviour {
 	static public string letzteSzene = "";
 	static public string aktuelleSzene = "";
 	
-	public void Start(){
+	void Start(){
 		Utopie = true;
 		letzteSzene = "";
 		aktuelleSzene = "Start";
@@ -19,9 +19,10 @@ public class SaveVariable : MonoBehaviour {
 	public void SetUtopieFalse(){Utopie=false;}
 
 	static public void SceneChange(string sceneName){
-		Application.LoadLevel(sceneName);
-		letzteSzene = aktuelleSzene;
+		//letzteSzene = aktuelleSzene;
 		aktuelleSzene = sceneName;
+		letzteSzene = Application.loadedLevelName;
 		Debug.Log ("Last Scene: " + letzteSzene + " | Aktuelle Szene: " + aktuelleSzene);
+		Application.LoadLevel(sceneName);
 	}
 }

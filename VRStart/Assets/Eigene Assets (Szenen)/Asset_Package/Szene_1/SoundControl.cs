@@ -9,7 +9,6 @@ public class SoundControl : MonoBehaviour {
 	protected float brightness;
 	protected bool AudioEnded=false;
 	public GameObject Türe;
-	public GameObject Mensch;
 	public GameObject Lampe;
 	
 	void Start() {
@@ -34,7 +33,7 @@ public class SoundControl : MonoBehaviour {
 		}
 		if(MyTime>GetComponent<AudioSource>().clip.length)
 		{	
-			Application.LoadLevel("Matrix");
+			SaveVariable.SceneChange ("Matrix");
 		}
 	}
 }
