@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SceneControllInterrogation : MonoBehaviour {
 
-	public string LastScene = "Start";
-
 	protected float MyTime = 0f;
 	public GameObject Flare;
 	protected float brightness;
@@ -45,28 +43,29 @@ public class SceneControllInterrogation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		if(SaveVariable.letzteSzene!="")LastScene = SaveVariable.letzteSzene;
-		switch (LastScene) {
-		case "Start":
-			StartSceneSetup ();
-			break;
-		case "ElDorado":
-			ElDoradoSceneSetup ();
-			break;
-		case "BladeRunner":
-			MatrixSceneSetup ();
-			break;
-		case "Tomorrowland":
-			MatrixSceneSetup ();
-			break;
-		case "Fluss":
-			FlussSceneSetup ();
-			break;
+		if(SaveVariable.letzteSzene!=""){
+			switch (SaveVariable.letzteSzene) {
+			case "Start":
+				StartSceneSetup ();
+				break;
+			case "ElDorado":
+				ElDoradoSceneSetup ();
+				break;
+			case "BladeRunner":
+				MatrixSceneSetup ();
+				break;
+			case "Tomorrowland":
+				MatrixSceneSetup ();
+				break;
+			case "Fluss":
+				FlussSceneSetup ();
+				break;
+			}
 		}
 	}
 
 	public void StartSceneSetup(){
-		Debug.Log ("S: "+LastScene);
+		Debug.Log ("S: "+SaveVariable.letzteSzene);
 		brightness = Flare.GetComponent<LensFlare>().brightness;
 		AudioEnded = false;
 
@@ -94,36 +93,37 @@ public class SceneControllInterrogation : MonoBehaviour {
 	}
 
 	public void ElDoradoSceneSetup (){
-		Debug.Log ("E: "+LastScene);
+		Debug.Log ("E: "+SaveVariable.letzteSzene);
 	}
 
 	public void MatrixSceneSetup (){
-		Debug.Log ("M: "+LastScene);
+		Debug.Log ("M: "+SaveVariable.letzteSzene);
 	}
 
 	public void FlussSceneSetup (){
-		Debug.Log ("F: "+LastScene);
+		Debug.Log ("F: "+SaveVariable.letzteSzene);
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(SaveVariable.letzteSzene!="")LastScene = SaveVariable.letzteSzene;
-		switch (LastScene) {
-		case "Start":
-			StartSceneUpdate ();
-			break;
-		case "ElDorado":
-			ElDoradoSceneUpdate ();
-			break;
-		case "BladeRunner":
-			MatrixSceneUpdate ();
-			break;
-		case "Tomorrowland":
-			MatrixSceneUpdate ();
-			break;
-		case "Fluss":
-			FlussSceneUpdate ();
-			break;
+		if (SaveVariable.letzteSzene != "") {
+			switch (SaveVariable.letzteSzene) {
+			case "Start":
+				StartSceneUpdate ();
+				break;
+			case "ElDorado":
+				ElDoradoSceneUpdate ();
+				break;
+			case "BladeRunner":
+				MatrixSceneUpdate ();
+				break;
+			case "Tomorrowland":
+				MatrixSceneUpdate ();
+				break;
+			case "Fluss":
+				FlussSceneUpdate ();
+				break;
+			}
 		}
 	}
 
