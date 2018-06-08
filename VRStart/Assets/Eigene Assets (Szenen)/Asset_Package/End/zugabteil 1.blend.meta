@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: b612b260936d1604aa093b5863e05a96
+timeCreated: 1528462926
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Abteil
+    100002: Armlehnen
+    100004: Bank_L
+    100006: Bank_R
+    100008: Gepack_L
+    100010: Gepack_R
+    100012: Scheibe
+    100014: Stuhl1
+    100016: Stuhl2
+    100018: Stuhl3
+    100020: Stuhl4
+    100022: Stuhl5
+    100024: Stuhl6
+    100026: Tischplatte
+    100028: Tischsockel
+    100030: Tuer
+    100032: Turfenster
+    100034: //RootNode
+    400000: Abteil
+    400002: Armlehnen
+    400004: Bank_L
+    400006: Bank_R
+    400008: Gepack_L
+    400010: Gepack_R
+    400012: Scheibe
+    400014: Stuhl1
+    400016: Stuhl2
+    400018: Stuhl3
+    400020: Stuhl4
+    400022: Stuhl5
+    400024: Stuhl6
+    400026: Tischplatte
+    400028: Tischsockel
+    400030: Tuer
+    400032: Turfenster
+    400034: //RootNode
+    2300000: Abteil
+    2300002: Armlehnen
+    2300004: Bank_L
+    2300006: Bank_R
+    2300008: Gepack_L
+    2300010: Gepack_R
+    2300012: Scheibe
+    2300014: Stuhl1
+    2300016: Stuhl2
+    2300018: Stuhl3
+    2300020: Stuhl4
+    2300022: Stuhl5
+    2300024: Stuhl6
+    2300026: Tischplatte
+    2300028: Tischsockel
+    2300030: Tuer
+    2300032: Turfenster
+    3300000: Abteil
+    3300002: Armlehnen
+    3300004: Bank_L
+    3300006: Bank_R
+    3300008: Gepack_L
+    3300010: Gepack_R
+    3300012: Scheibe
+    3300014: Stuhl1
+    3300016: Stuhl2
+    3300018: Stuhl3
+    3300020: Stuhl4
+    3300022: Stuhl5
+    3300024: Stuhl6
+    3300026: Tischplatte
+    3300028: Tischsockel
+    3300030: Tuer
+    3300032: Turfenster
+    4300000: Turfenster
+    4300002: Tuer
+    4300004: Scheibe
+    4300006: Gepack_R
+    4300008: Gepack_L
+    4300010: Armlehnen
+    4300012: Tischsockel
+    4300014: Tischplatte
+    4300016: Stuhl6
+    4300018: Bank_R
+    4300020: Stuhl5
+    4300022: Stuhl4
+    4300024: Stuhl3
+    4300026: Stuhl2
+    4300028: Bank_L
+    4300030: Stuhl1
+    4300032: Abteil
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -49,6 +49,8 @@
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\GlobeDrehen.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\ColliderDrobStone.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />

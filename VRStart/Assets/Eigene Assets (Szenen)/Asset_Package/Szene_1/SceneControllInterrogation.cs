@@ -48,6 +48,9 @@ public class SceneControllInterrogation : MonoBehaviour {
 			case "Start":
 				StartSceneSetup ();
 				break;
+			case "Start_zug":
+				StartSceneSetup ();
+				break;
 			case "ElDorado":
 				ElDoradoSceneSetup ();
 				break;
@@ -109,6 +112,9 @@ public class SceneControllInterrogation : MonoBehaviour {
 		if (SaveVariable.letzteSzene != "") {
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
+				StartSceneUpdate ();
+				break;
+			case "Start_zug":
 				StartSceneUpdate ();
 				break;
 			case "ElDorado":
