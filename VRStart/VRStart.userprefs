@@ -1,22 +1,24 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs">
     <Files>
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerMundZu.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerKinder.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\GazeAnimation.cs" Line="10" Column="37" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\GazeAnimation.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="35" Column="45" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchAnimationEnd.cs" Line="34" Column="29" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" Line="18" Column="43" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" Line="123" Column="23" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchAnimationEnd.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitch.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" Line="54" Column="24" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" Line="70" Column="35" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs" Line="6" Column="35" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerMundAuf.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
