@@ -61,6 +61,40 @@
      <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioRoomEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSoundfieldEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSourceEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\BloomModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\FogModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\GrainModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PostProcessingFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PostProcessingInspector.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PostProcessingModelEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PostProcessingMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Utils\CurveEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
+     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
      <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
      <Compile Include="Assets\UTJ\FrameCapturer\Editor\AudioEncoderConfigDrawer.cs" />
      <Compile Include="Assets\UTJ\FrameCapturer\Editor\AudioRecorderEditor.cs" />
@@ -70,36 +104,76 @@
      <Compile Include="Assets\UTJ\FrameCapturer\Editor\MovieEncoderConfigDrawer.cs" />
      <Compile Include="Assets\UTJ\FrameCapturer\Editor\MovieRecorderEditor.cs" />
      <Compile Include="Assets\UTJ\FrameCapturer\Editor\RecorderBaseEditor.cs" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Day-Night Skyboxes\readme.txt" />
      <None Include="Assets\StreamingAssets\UTJ\FrameCapturer\License.txt" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
      <None Include="Assets\UTJ\FrameCapturer\Shaders\CopyFrameBuffer.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
      <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrController.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-6DOF.xml" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
      <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\GoogleVR\Shaders\GvrControllerReticle.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-Daydream.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\HelloVR\HelloVRUnlitGrayscaleToColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\RainMaker\Readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\proguard-gvr.txt" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -158,7 +232,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>C:/Users/marvi/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>C:/Users/Marvin/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

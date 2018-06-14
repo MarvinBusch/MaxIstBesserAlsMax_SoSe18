@@ -16,8 +16,8 @@
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitch.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" Line="70" Column="35" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs" Line="6" Column="35" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerMundAuf.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
