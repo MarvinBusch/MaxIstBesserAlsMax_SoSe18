@@ -17,7 +17,8 @@ public class GrabStone : MonoBehaviour {
 	public GameObject GVRKontroller;
 	public GameObject Kamera;
 	public GameObject World;
-	public GameObject Stone;
+	public GameObject[] Stone;
+	int steinnummer;
 	Transform tempTrans;
 
 
@@ -29,6 +30,7 @@ public class GrabStone : MonoBehaviour {
 		AnimOverOne = false;
 		DropCollider.SetActive (false);
 		GVRKontroller.SetActive (true);
+		steinnummer = 0;
 	}
 
 	public void Update()
@@ -44,7 +46,7 @@ public class GrabStone : MonoBehaviour {
 		}
 
 		if (Hand.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !Hand.GetComponent<Animator>().IsInTransition(0)&&StoneGrabbing==false){
-			TakeStone ();
+			TakeStone (steinnummer);
 			StoneGrabbing = true;
 			AnimOverOne = true;
 		}
@@ -56,7 +58,8 @@ public class GrabStone : MonoBehaviour {
 
 	}
 		
-	public void LookAtAnimStart(){
+	public void LookAtAnimStart(int stein){
+		steinnummer = stein;
 		Hand.GetComponent<Animator>().SetFloat("AnimationSpeed", PlaySpeed);
 	}
 
@@ -64,23 +67,21 @@ public class GrabStone : MonoBehaviour {
 		Hand.GetComponent<Animator> ().SetFloat ("AnimationSpeed", -InverseMultiplier * PlaySpeed);
 	}
 
-	public void TakeStone(){
-		Stone.transform.parent = Kamera.transform;
+		public void TakeStone(int x){
+		Stone[x].transform.parent = Kamera.transform;
 		DropCollider.SetActive (true);
 		GVRKontroller.SetActive (false);
-		Debug.Log ("Take Stone");
-
 	}
 
 	public void DropStone(){
 		DropCollider.SetActive (false);
 		GVRKontroller.SetActive (true);
-		Stone.transform.parent = World.transform;
-		Stone.GetComponent<BoxCollider> ().enabled=false;
-		Stone.GetComponent<Rigidbody> ().isKinematic= true;
+		Stone[steinnummer].transform.parent = World.transform;
+		MeshCollider[] colliders = Stone [steinnummer].GetComponents<MeshCollider> ();
+		foreach (MeshCollider mc in colliders) {mc.enabled = false;}
+		Stone[steinnummer].GetComponent<Rigidbody> ().isKinematic= true;
 		LookNOTAtAnimStart ();
 		StoneGrabbing = false;
-		Debug.Log ("Drop Stone");
 	}
 }
 

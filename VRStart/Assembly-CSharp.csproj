@@ -56,9 +56,11 @@
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\EndLimbus.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\CompassRotation.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\FarbwechselPfeile.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\HitDecision.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\HitSuccess.cs" />

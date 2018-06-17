@@ -45,6 +45,7 @@ public class MatrixLightControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		SaveVariable.CountTime ();
 		if(end==false){
 			MyTime += Time.deltaTime;
 			if(MyTime>StartTime&&Go==false){

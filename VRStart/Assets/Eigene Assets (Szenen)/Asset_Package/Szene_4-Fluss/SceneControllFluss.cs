@@ -63,6 +63,7 @@ public class SceneControllFluss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		SaveVariable.CountTime ();
 		MyTime += Time.deltaTime;
 		if(MusicTrigger==true){
 			RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Color.grey, NewColor, step));

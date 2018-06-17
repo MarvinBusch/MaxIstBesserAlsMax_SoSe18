@@ -10,6 +10,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	protected bool AudioEnded=false;
 	public GameObject Türe;
 	public GameObject Lampe;
+	public GameObject Kamera;
 
 	public float StartTime = 5.0f;
 	public float DurationLampe = 5.0f;
@@ -45,7 +46,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SaveVariable.letzteSzene="Start";
+		//SaveVariable.letzteSzene="Start";
 		if(SaveVariable.letzteSzene!=""){
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -57,7 +58,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 			case "ElDorado":
 				ElDoradoSceneSetup ();
 				break;
-			case "BladeRunner":
+			case "BladeRunner_neu":
 				MatrixSceneSetup ();
 				break;
 			case "Tomorrowland":
@@ -79,9 +80,9 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 		MyTime=0f;
 
-		/*for(int i=0; i<Lights.Length; i++){
+		for(int i=0; i<Lights.Length; i++){
 			Lights[i].GetComponent<Light>().intensity = 0f;
-		}*/
+		}
 
 		MenschAnim = MenschTisch.GetComponent<Animator>();
 		MenschTisch.SetActive (false);
@@ -95,6 +96,11 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	public void MatrixSceneSetup (){
 		Debug.Log ("M: "+SaveVariable.letzteSzene);
+
+		for(int i=0; i<Lights.Length; i++){
+			Lights[i].GetComponent<Light>().intensity = 0f;
+		}
+
 	}
 
 	public void FlussSceneSetup (){
@@ -103,6 +109,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		SaveVariable.CountTime ();
+		MyTime += Time.deltaTime;
 		if (SaveVariable.letzteSzene != "") {
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -114,7 +122,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 			case "ElDorado":
 				ElDoradoSceneUpdate ();
 				break;
-			case "BladeRunner":
+			case "BladeRunner_neu":
 				MatrixSceneUpdate ();
 				break;
 			case "Tomorrowland":
@@ -130,8 +138,6 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	public void StartSceneUpdate (){
 		if (EndTuere==false)
 		{
-			MyTime += Time.deltaTime;
-
 			if(MyTime>WaitTime&&StartTuere==false){
 				MyTime=0;
 				StartTuere=true;
@@ -196,12 +202,20 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		}
 	}
 
-	public void ElDoradoSceneUpdate (){
-		Debug.Log ("E: Update");
+	public void MatrixSceneUpdate (){
+		//Debug.Log ("M: Update");
+		for(int i=0; i<Lights.Length; i++){
+			Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/DurationLampe);
+		}
+		Debug.Log (LightIntensity + " / " + Lights [0].GetComponent<Light> ().intensity);
+		if (Lights [0].GetComponent<Light> ().intensity == LightIntensity) {
+			Debug.Log ("Lights On");
+			Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+		}
 	}
 
-	public void MatrixSceneUpdate (){
-		Debug.Log ("M: Update");
+	public void ElDoradoSceneUpdate (){
+		Debug.Log ("E: Update");
 	}
 
 	public void FlussSceneUpdate (){

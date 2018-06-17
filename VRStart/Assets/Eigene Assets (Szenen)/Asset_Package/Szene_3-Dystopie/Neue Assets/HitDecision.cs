@@ -36,7 +36,7 @@ public class HitDecision : MonoBehaviour {
 
 		if (Decision==1){Schrift_de_1.SetActive(true);}
 		Raumschiff.GetComponent<Animator>().SetFloat("PlayMulti", 0f);
-		Feuer.GetComponent<Animator>().SetFloat("Feuer_Speed", 0.4f);
+		if(Decision!=1){Feuer.GetComponent<Animator> ().SetFloat ("Feuer_Speed", 0.4f);}
 	}
 
 	void OnTriggerExit(Collider other){
@@ -44,7 +44,7 @@ public class HitDecision : MonoBehaviour {
 		Pfeil_mi.GetComponent<FarbwechselPfeile> ().Deaktivieren ();
 		Pfeil_re.GetComponent<FarbwechselPfeile> ().Deaktivieren ();
 		Raumschiff.GetComponent<Animator> ().SetInteger ("State", 0);
-		Feuer.GetComponent<Animator>().SetFloat("Feuer_Speed", 1f);
+		if(Decision!=1){Feuer.GetComponent<Animator> ().SetFloat ("Feuer_Speed", 1f);}
 		Schrift_de_1.SetActive(false);
 	}
 

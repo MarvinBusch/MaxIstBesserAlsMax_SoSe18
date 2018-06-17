@@ -13,15 +13,12 @@ public class DisplayTime : MonoBehaviour {
 	}
 
 	void Update () {
-		if (SaveVariable.Zeit_Seit_Start > 0) {myTime = SaveVariable.Zeit_Seit_Start;} 
-		else {myTime += Time.deltaTime;}
-
+		myTime += Time.deltaTime;
 		changeDisplayTime ();
 	}
 
 	void changeDisplayTime(){
-		GetComponent<TextMesh> ().text = (Mathf.Floor(myTime/60)).ToString("F0") + ":" + (myTime%60).ToString("00");
-		//GetComponent<TextMesh> ().text = (Mathf.Floor(myTime/60)).ToString("F0") + ":" + (myTime%60).ToString("F1");
+		GetComponent<TextMesh> ().text = (Mathf.Floor((SaveVariable.Zeit_Seit_Start + myTime)/60)).ToString("F0") + ":" + ((SaveVariable.Zeit_Seit_Start + myTime)%60).ToString("00");
 	}
 
 	public void changeColor(Color neueFarbe){

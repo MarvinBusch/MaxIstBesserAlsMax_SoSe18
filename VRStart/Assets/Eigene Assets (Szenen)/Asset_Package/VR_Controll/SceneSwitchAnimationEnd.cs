@@ -27,7 +27,8 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 	
 	
 	public void Update()
-	{
+	{		
+			SaveVariable.CountTime ();
 			MyTime += Time.deltaTime;
 			if (MyTime > m_CurrentClipInfo[0].clip.length - FadeDuration)
 			{

@@ -5,21 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SaveVariable : MonoBehaviour {
 
-	static public bool Utopie;
+	static public bool Utopie = true;
 	static public float Zeit_Seit_Start = 0f;
 	static public string letzteSzene = "";
 	static public string aktuelleSzene = "";
-	
-	void Start(){
-		Utopie = true;
-		letzteSzene = "";
-		aktuelleSzene = "Start_zug";
-		Zeit_Seit_Start = 0f;
-	}
-
-	void Udate(){
-		Zeit_Seit_Start += Time.deltaTime;
-	}
 
 	public void SetUtopieTrue(){Utopie=true;}
 	public void SetUtopieFalse(){Utopie=false;}
@@ -30,5 +19,9 @@ public class SaveVariable : MonoBehaviour {
 		letzteSzene = Application.loadedLevelName;
 		Debug.Log ("Last Scene: " + letzteSzene + " | Aktuelle Szene: " + aktuelleSzene);
 		Application.LoadLevel(sceneName);
+	}
+
+	static public void CountTime(){
+		Zeit_Seit_Start += Time.deltaTime;
 	}
 }
