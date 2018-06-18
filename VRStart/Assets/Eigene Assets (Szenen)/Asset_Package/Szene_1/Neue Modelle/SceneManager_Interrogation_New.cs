@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	protected float MyTime = 0f;
+	protected float MyTimeHEad = 0f;
 	public GameObject Flare;
 	protected float brightness;
 	protected bool AudioEnded=false;
@@ -27,10 +28,11 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	public float FlareIntensity = 500f;
 	public float FlareBrightness = 5f;
 
-	public GameObject Audio;
-
 	private bool TuereAuf = false;
 	private bool StartTuere = false;
+
+	public GameObject AudioObj;
+	int countAudio;
 
 
 
@@ -42,11 +44,13 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	private bool Collides = false;
 	private bool AudioPlay = false;
 
+	private bool HeadTrack = false;
+
 
 
 	// Use this for initialization
 	void Start () {
-		//SaveVariable.letzteSzene="Start";
+		SaveVariable.letzteSzene="Start";
 		if(SaveVariable.letzteSzene!=""){
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -78,7 +82,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		Flare.GetComponent<LensFlare>().brightness = 0f;
 		Flare.GetComponent<LensFlare>().fadeSpeed = 1000;
 
-		MyTime=0f;
+		MyTime = 0f;
+		MyTimeHEad = 0f;
 
 		for(int i=0; i<Lights.Length; i++){
 			Lights[i].GetComponent<Light>().intensity = 0f;
@@ -88,6 +93,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		MenschTisch.SetActive (false);
 		TuereAuf = false;
 		StartTuere = false;
+		HeadTrack = true;
+		countAudio = 1;
 	}
 
 	public void ElDoradoSceneSetup (){
@@ -101,6 +108,10 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 			Lights[i].GetComponent<Light>().intensity = 0f;
 		}
 
+		MyTimeHEad = 0f;
+
+		HeadTrack = false;
+		Go = true;
 	}
 
 	public void FlussSceneSetup (){
@@ -111,6 +122,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	void Update () {
 		SaveVariable.CountTime ();
 		MyTime += Time.deltaTime;
+		MyTimeHEad += Time.deltaTime;
 		if (SaveVariable.letzteSzene != "") {
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -136,81 +148,109 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	}
 
 	public void StartSceneUpdate (){
-		if (EndTuere==false)
-		{
-			if(MyTime>WaitTime&&StartTuere==false){
-				MyTime=0;
-				StartTuere=true;
+		if (EndTuere == false) {
+			if (MyTime > WaitTime && StartTuere == false) {
+				MyTime = 0;
+				StartTuere = true;
 				MenschTisch.SetActive (true);
 				MenschAnim.SetInteger ("State", 1);
 			}
-			if(MyTime>DurationTuere&&StartTuere==true){
-				EndTuere=true;
-				Türe.GetComponent<Transform>().eulerAngles = new Vector3(-90, 0, 90);
-				MyTime=0;
+			if (MyTime > DurationTuere && StartTuere == true) {
+				EndTuere = true;
+				Türe.GetComponent<Transform> ().eulerAngles = new Vector3 (-90, 0, 90);
+				MyTime = 0;
 				MenschAnim.SetInteger ("State", 0);
 			}		
-			if(StartTuere==true)
-			{
-				if(TuereAuf == false){
-					if(MyTime>(DurationTuere/2)){TuereAuf=true;}
-					else{Türe.GetComponent<Transform>().eulerAngles = new Vector3 (-90, 0, 90 + (90 * (MyTime/(DurationTuere/2))));}
-				}
-				if(TuereAuf == true){
-					Türe.GetComponent<Transform>().eulerAngles = new Vector3(-90, 0, 270 + (-90 * (MyTime/(DurationTuere/2))));
-				}
-			}
-		}
-		else{		
-			Türe.GetComponent<Transform>().eulerAngles = new Vector3(-90, 0, 90);
-			if(FlareIsShown==true)
-			{
-				Flare.GetComponent<LensFlare>().fadeSpeed = 0;
-			}
-			if(end==false){
-				MyTime += Time.deltaTime;
-				if(MyTime>WaitTime&&Go==false){
-					Lampe.GetComponent<AudioSource>().Play();
-					MyTime=0;
-					Go=true;
-					Flare.GetComponent<Light>().intensity = FlareIntensity;
-					Flare.GetComponent<LensFlare>().brightness = FlareBrightness;
-					if(Collides==true) {FlareIsShown = true;}
-				}
-				if(MyTime>DurationLampe&&Go==true){
-					end=true;
-				}
-				if(Go==true){
-					for(int i=0; i<Lights.Length; i++){
-						Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/DurationLampe);
+			if (StartTuere == true) {
+				if (TuereAuf == false) {
+					if (MyTime > (DurationTuere / 2)) {
+						TuereAuf = true;
+					} else {
+						Türe.GetComponent<Transform> ().eulerAngles = new Vector3 (-90, 0, 90 + (90 * (MyTime / (DurationTuere / 2))));
 					}
 				}
-		}
-		if (end==true){
-			if(AudioPlay==false){
-				Audio.GetComponent<AudioSource>().Play();
-				MyTime=0;
-				MenschAnim.SetInteger ("State", 2);
-				AudioPlay=true;
+				if (TuereAuf == true) {
+					Türe.GetComponent<Transform> ().eulerAngles = new Vector3 (-90, 0, 270 + (-90 * (MyTime / (DurationTuere / 2))));
+				}
 			}
-			//else{MyTime+= Time.deltaTime;}
-			//if (MyTime>3f){MenschAnim.enabled = false;}
-			//if (MyTime>Audio.GetComponent<AudioSource>().clip.length - 1f){MenschAnim.enabled = true; MenschAnim.speed = 2.5f;}
-			//if(MyTime>Audio.GetComponent<AudioSource>().clip.length){SaveVariable.SceneChange ("Matrix");}
-		}
+		} else {		
+			Türe.GetComponent<Transform> ().eulerAngles = new Vector3 (-90, 0, 90);
+			if (FlareIsShown == true) {
+				Flare.GetComponent<LensFlare> ().fadeSpeed = 0;
+			}
+			if (end == false) {
+				if (MyTime > WaitTime && Go == false) {
+					Lampe.GetComponent<AudioSource> ().Play ();
+					MyTime = 0;
+					Go = true;
+					Flare.GetComponent<Light> ().intensity = FlareIntensity;
+					Flare.GetComponent<LensFlare> ().brightness = FlareBrightness;
+					if (Collides == true) {
+						FlareIsShown = true;
+					}
+				}
+				if (MyTime > DurationLampe && Go == true) {
+					end = true;
+				}
+				if (Go == true) {
+					for (int i = 0; i < Lights.Length; i++) {
+						Lights [i].GetComponent<Light> ().intensity = LightIntensity * (MyTime / DurationLampe);
+					}
+				}
+			}
+			if (end == true) {
+				if (AudioPlay == false) {
+					loadClipIntoAudio (countAudio.ToString());
+					AudioObj.GetComponent<AudioSource> ().Play ();
+					MyTime = 0;
+					MenschAnim.SetInteger ("State", 2);
+					AudioPlay = true;
+				}
+				if (MyTime > AudioObj.GetComponent<AudioSource> ().clip.length) {
+					if (HeadTrack) {
+						Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+						HeadTrack = false;
+						MyTimeHEad = 0f;
+					}
+					if (MyTimeHEad > Kamera.GetComponent<Nodding> ().Duration) {
+						string loadstring;
+						switch (Kamera.GetComponent<Nodding> ().choice) {
+						case -1:
+							loadClipIntoAudio (countAudio.ToString() + "_O");
+							break;
+						case 0:
+							loadClipIntoAudio (countAudio.ToString() + "_J");
+							break;
+						case 1:
+							loadClipIntoAudio (countAudio.ToString() + "_N");
+							break;
+						}
+						countAudio++;
+						AudioPlay = false;
+						MyTimeHEad = 0;
+						HeadTrack = true;
+					}
+				}
 
+			}
 		}
 	}
 
 	public void MatrixSceneUpdate (){
 		//Debug.Log ("M: Update");
-		for(int i=0; i<Lights.Length; i++){
-			Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/DurationLampe);
-		}
-		Debug.Log (LightIntensity + " / " + Lights [0].GetComponent<Light> ().intensity);
-		if (Lights [0].GetComponent<Light> ().intensity == LightIntensity) {
-			Debug.Log ("Lights On");
+		if (Go) {
+			if (MyTime < DurationLampe) {
+				for (int i = 0; i < Lights.Length; i++) {
+					Lights [i].GetComponent<Light> ().intensity = LightIntensity * (MyTime / DurationLampe);
+				}
+			} else {
+				Go = false;
+				HeadTrack = true;
+				Debug.Log ("Light On");
+			}
+		} else if (HeadTrack) {
 			Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+			HeadTrack = false;
 		}
 	}
 
@@ -230,6 +270,13 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	}
 	public void DetectDeCollision(){
 		Collides = false;
+	}
+
+	void loadClipIntoAudio(string NewAudio){
+		string fileName = "Text_Inter/" + NewAudio;
+		Debug.Log ("Filename: " + fileName);
+		AudioObj.GetComponent<AudioSource> ().clip = Resources.Load<AudioClip>(fileName);
+		Debug.Log ("NameAudio: " + AudioObj.GetComponent<AudioSource> ().clip.name);
 	}
 
 }

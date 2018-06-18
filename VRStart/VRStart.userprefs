@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs">
     <Files>
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" Line="84" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" Line="170" Column="19" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" Line="16" Column="17" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" Line="229" Column="25" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\HeadMovment.cs" Line="8" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
