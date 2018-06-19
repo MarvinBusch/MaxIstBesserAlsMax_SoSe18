@@ -43,14 +43,17 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	private bool FlareIsShown = false;
 	private bool Collides = false;
 	private bool AudioPlay = false;
+	private bool FirstHeadFinish = false;
+	private bool Sceneswitch = false;
 
 	private bool HeadTrack = false;
+	private bool HeadTrackTime = false;
 
 
 
 	// Use this for initialization
 	void Start () {
-		SaveVariable.letzteSzene="Start";
+		//SaveVariable.letzteSzene="ElDorado";
 		if(SaveVariable.letzteSzene!=""){
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -93,25 +96,49 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		MenschTisch.SetActive (false);
 		TuereAuf = false;
 		StartTuere = false;
-		HeadTrack = true;
+		HeadTrack = false;
+		HeadTrackTime = false;
+		FirstHeadFinish = false;
+		Sceneswitch = false;
 		countAudio = 1;
 	}
 
 	public void ElDoradoSceneSetup (){
 		Debug.Log ("E: "+SaveVariable.letzteSzene);
+
+		Flare.GetComponent<LensFlare>().fadeSpeed = 1000;
+		Flare.GetComponent<LensFlare>().brightness = FlareBrightness;
+		for(int i=0; i<Lights.Length; i++){
+			Lights[i].GetComponent<Light>().intensity = 0f;
+		}
+
+		MyTime = 0f;
+		MyTimeHEad = 0f;
+
+		Sceneswitch = false;
+		HeadTrack = false;
+		HeadTrackTime = false;
+		Go = true;
+		countAudio = 4;
 	}
 
 	public void MatrixSceneSetup (){
 		Debug.Log ("M: "+SaveVariable.letzteSzene);
 
+		Flare.GetComponent<LensFlare>().fadeSpeed = 1000;
+		Flare.GetComponent<LensFlare>().brightness = FlareBrightness;
 		for(int i=0; i<Lights.Length; i++){
 			Lights[i].GetComponent<Light>().intensity = 0f;
 		}
 
+		MyTime = 0f;
 		MyTimeHEad = 0f;
 
+		Sceneswitch = false;
 		HeadTrack = false;
+		HeadTrackTime = false;
 		Go = true;
+		countAudio = 3;
 	}
 
 	public void FlussSceneSetup (){
@@ -121,8 +148,11 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		SaveVariable.CountTime ();
-		MyTime += Time.deltaTime;
-		MyTimeHEad += Time.deltaTime;
+		if (!HeadTrackTime) {
+			MyTime += Time.deltaTime;
+		} else {
+			MyTimeHEad += Time.deltaTime;
+		}
 		if (SaveVariable.letzteSzene != "") {
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -199,67 +229,202 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 				}
 			}
 			if (end == true) {
-				if (AudioPlay == false) {
-					loadClipIntoAudio (countAudio.ToString());
-					AudioObj.GetComponent<AudioSource> ().Play ();
-					MyTime = 0;
-					MenschAnim.SetInteger ("State", 2);
-					AudioPlay = true;
-				}
-				if (MyTime > AudioObj.GetComponent<AudioSource> ().clip.length) {
-					if (HeadTrack) {
-						Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
-						HeadTrack = false;
-						MyTimeHEad = 0f;
+				if (AudioObj.GetComponent<AudioSource> ().isPlaying == false && !HeadTrack) {
+
+					switch (countAudio) {
+					case 1:
+						MenschAnim.SetInteger ("State", 2);
+						break;
+					case 2:
+						Debug.Log ("Audio2");
+						break;
+					case 3:
+						Sceneswitch = true;
+						MyTime = 0;
+						break;
 					}
-					if (MyTimeHEad > Kamera.GetComponent<Nodding> ().Duration) {
-						string loadstring;
-						switch (Kamera.GetComponent<Nodding> ().choice) {
-						case -1:
-							loadClipIntoAudio (countAudio.ToString() + "_O");
-							break;
-						case 0:
-							loadClipIntoAudio (countAudio.ToString() + "_J");
-							break;
-						case 1:
-							loadClipIntoAudio (countAudio.ToString() + "_N");
-							break;
-						}
-						countAudio++;
-						AudioPlay = false;
-						MyTimeHEad = 0;
+					if (countAudio != 3) {
+						loadClipIntoAudio (countAudio.ToString ());
+						AudioObj.GetComponent<AudioSource> ().Play ();
 						HeadTrack = true;
+						MyTime = 0;
 					}
+				}
+				if (MyTime > AudioObj.GetComponent<AudioSource> ().clip.length && HeadTrack) {
+					Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+					HeadTrackTime = true;
+					MyTimeHEad = 0f;
+					MyTime = 0;
 				}
 
+				if (MyTimeHEad > Kamera.GetComponent<Nodding> ().Duration && Kamera.GetComponent<Nodding> ().Auswertung == true) {
+					string loadstring;
+					Debug.Log("Wahl: "+Kamera.GetComponent<Nodding> ().choice);
+					switch (Kamera.GetComponent<Nodding> ().choice) {
+					case -1:
+						loadClipIntoAudio (countAudio.ToString () + "_O");
+						break;
+					case 0:
+						loadClipIntoAudio (countAudio.ToString () + "_J");
+						break;
+					case 1:
+						loadClipIntoAudio (countAudio.ToString () + "_N");
+						break;
+					}	
+					countAudio++;
+					AudioObj.GetComponent<AudioSource> ().Play ();
+					HeadTrackTime = false;
+					HeadTrack = false;
+					MyTimeHEad = 0;
+				}
+				if (Sceneswitch) {
+					if (Lights [0].GetComponent<Light> ().intensity <= 0) {
+						Flare.GetComponent<Light>().intensity = 0f;
+						SaveVariable.SceneChange ("Matrix");
+					}
+					for (int i = 0; i < Lights.Length; i++) {
+						Lights [i].GetComponent<Light> ().intensity = (LightIntensity * -(MyTime / DurationLampe));
+					}
+				}
 			}
+
 		}
 	}
+
 
 	public void MatrixSceneUpdate (){
 		//Debug.Log ("M: Update");
 		if (Go) {
+			if (Collides == true) {
+				FlareIsShown = true;
+				Flare.GetComponent<LensFlare>().fadeSpeed = 0;
+			}
 			if (MyTime < DurationLampe) {
 				for (int i = 0; i < Lights.Length; i++) {
 					Lights [i].GetComponent<Light> ().intensity = LightIntensity * (MyTime / DurationLampe);
 				}
 			} else {
 				Go = false;
-				HeadTrack = true;
-				Debug.Log ("Light On");
+				Debug.Log ("Light On! Go: "+ Go);
 			}
-		} else if (HeadTrack) {
-			Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
-			HeadTrack = false;
+		} else {
+			
+			if (AudioObj.GetComponent<AudioSource> ().isPlaying == false && !HeadTrack) {
+				Debug.Log ("count: " + countAudio);
+
+				loadClipIntoAudio (countAudio.ToString ());
+				AudioObj.GetComponent<AudioSource> ().Play ();
+				HeadTrack = true;
+				MyTime = 0;
+			}
+			if (MyTime > AudioObj.GetComponent<AudioSource> ().clip.length && HeadTrack) {
+				Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+				HeadTrackTime = true;
+				MyTimeHEad = 0f;
+				MyTime = 0;
+			}
+
+			if (MyTimeHEad > Kamera.GetComponent<Nodding> ().Duration && Kamera.GetComponent<Nodding> ().Auswertung == true) {
+				string loadstring;
+				Debug.Log ("Wahl: " + Kamera.GetComponent<Nodding> ().choice);
+				switch (Kamera.GetComponent<Nodding> ().choice) {
+				case -1:
+					loadClipIntoAudio (countAudio.ToString () + "_O");
+					break;
+				case 0:
+					loadClipIntoAudio (countAudio.ToString () + "_J");
+					break;
+				case 1:
+					loadClipIntoAudio (countAudio.ToString () + "_N");
+					break;
+				}	
+				countAudio++;
+				AudioObj.GetComponent<AudioSource> ().Play ();
+				HeadTrackTime = false;
+				Sceneswitch = true;
+				MyTimeHEad = 0;
+			}
+			if (AudioObj.GetComponent<AudioSource> ().isPlaying == false && Sceneswitch) {
+				if (Lights [0].GetComponent<Light> ().intensity <= 0) {
+					Flare.GetComponent<Light> ().intensity = 0f;
+					SaveVariable.SceneChange ("ElDorado");
+				}
+				for (int i = 0; i < Lights.Length; i++) {
+					Lights [i].GetComponent<Light> ().intensity = (LightIntensity * -(MyTime / DurationLampe));
+				}
+			}
 		}
+	
 	}
 
 	public void ElDoradoSceneUpdate (){
-		Debug.Log ("E: Update");
+		//Debug.Log ("E: Update");
+
+		if (Go) {
+			if (Collides == true) {
+				FlareIsShown = true;
+				Flare.GetComponent<LensFlare>().fadeSpeed = 0;
+			}
+			if (MyTime < DurationLampe) {
+				for (int i = 0; i < Lights.Length; i++) {
+					Lights [i].GetComponent<Light> ().intensity = LightIntensity * (MyTime / DurationLampe);
+				}
+			} else {
+				Go = false;
+				Debug.Log ("Light On! Go: "+ Go);
+			}
+		} else {
+
+			if (AudioObj.GetComponent<AudioSource> ().isPlaying == false && !HeadTrack) {
+				Debug.Log ("count: " + countAudio);
+
+				loadClipIntoAudio (countAudio.ToString ());
+				AudioObj.GetComponent<AudioSource> ().Play ();
+				HeadTrack = true;
+				MyTime = 0;
+			}
+			if (MyTime > AudioObj.GetComponent<AudioSource> ().clip.length && HeadTrack) {
+				Kamera.GetComponent<Nodding> ().ActivateHeadMovement ();
+				HeadTrackTime = true;
+				MyTimeHEad = 0f;
+				MyTime = 0;
+			}
+
+			if (MyTimeHEad > Kamera.GetComponent<Nodding> ().Duration && Kamera.GetComponent<Nodding> ().Auswertung == true) {
+				string loadstring;
+				Debug.Log ("Wahl: " + Kamera.GetComponent<Nodding> ().choice);
+				switch (Kamera.GetComponent<Nodding> ().choice) {
+				case -1:
+					loadClipIntoAudio (countAudio.ToString () + "_O");
+					break;
+				case 0:
+					loadClipIntoAudio (countAudio.ToString () + "_J");
+					break;
+				case 1:
+					loadClipIntoAudio (countAudio.ToString () + "_N");
+					break;
+				}	
+				countAudio++;
+				AudioObj.GetComponent<AudioSource> ().Play ();
+				HeadTrackTime = false;
+				Sceneswitch = true;
+				MyTimeHEad = 0;
+			}
+			if (AudioObj.GetComponent<AudioSource> ().isPlaying == false && Sceneswitch) {
+				if (Lights [0].GetComponent<Light> ().intensity <= 0) {
+					Flare.GetComponent<Light> ().intensity = 0f;
+					SaveVariable.SceneChange ("Fluss");
+				}
+				for (int i = 0; i < Lights.Length; i++) {
+					Lights [i].GetComponent<Light> ().intensity = (LightIntensity * -(MyTime / DurationLampe));
+				}
+			}
+		}
+
 	}
 
 	public void FlussSceneUpdate (){
-		Debug.Log ("F: Update");
+		//Debug.Log ("F: Update");
 	}
 
 	public void DetectCollision(){
@@ -274,10 +439,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	void loadClipIntoAudio(string NewAudio){
 		string fileName = "Text_Inter/" + NewAudio;
-		Debug.Log ("Filename: " + fileName);
 		AudioObj.GetComponent<AudioSource> ().clip = Resources.Load<AudioClip>(fileName);
 		Debug.Log ("NameAudio: " + AudioObj.GetComponent<AudioSource> ().clip.name);
 	}
-
 }
 

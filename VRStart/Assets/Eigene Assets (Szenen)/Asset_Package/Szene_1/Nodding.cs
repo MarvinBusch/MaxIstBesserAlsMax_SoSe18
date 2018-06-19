@@ -8,6 +8,7 @@ public class Nodding : MonoBehaviour {
 	private int index;
 	private Vector3 centerAngle;
 	bool ActivateHead;
+	public bool Auswertung;
 	float myTime;
 	public int choice;
 	public int Duration = 5;
@@ -16,6 +17,7 @@ public class Nodding : MonoBehaviour {
 	void Start () {
 		ResetGesture ();
 		ActivateHead = false;
+		Auswertung = false;
 		myTime = 0f;
 	}
 	
@@ -40,8 +42,8 @@ public class Nodding : MonoBehaviour {
 				default:
 					break;
 				}
-				ResetGesture ();
 				ActivateHead = false;
+				Auswertung = true;
 				myTime = 0f;
 			}
 		}
@@ -101,6 +103,7 @@ public class Nodding : MonoBehaviour {
 		index = 0;
 		centerAngle = transform.eulerAngles;
 		choice = -1;
+		Auswertung = false;
 	}
 
 	public void ActivateHeadMovement(){

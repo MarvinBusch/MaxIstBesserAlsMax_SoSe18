@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Interrogation2.unity
+- path: Assets/Scenes/Limbus.unity
   isLoaded: 1
   isActive: 1
