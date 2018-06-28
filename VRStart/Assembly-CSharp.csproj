@@ -49,6 +49,10 @@
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\GlobeDrehen.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\BrueckenOeffnen.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\Kugelschneller.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\SpielManager.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\TomorrowlandEnde.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\ColliderDrobStone.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\GrabStone.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs" />
@@ -60,6 +64,7 @@
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Assets\RadioScript.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\CompassRotation.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\FarbwechselPfeile.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\HitDecision.cs" />
@@ -342,7 +347,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>C:/Users/marvi/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>C:/Users/Marvin/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

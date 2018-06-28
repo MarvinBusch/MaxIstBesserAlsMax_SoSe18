@@ -80,6 +80,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	public void StartSceneSetup(){
 		Debug.Log ("S: "+SaveVariable.letzteSzene);
+		SaveVariable.Zeit_Seit_Start=0f;
 		brightness = Flare.GetComponent<LensFlare>().brightness;
 		Flare.GetComponent<Light>().intensity = 0f;
 		Flare.GetComponent<LensFlare>().brightness = 0f;
