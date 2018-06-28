@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Script wird am Ende der BladeRunner Szene und ElDorado Szene verwendet. 
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
