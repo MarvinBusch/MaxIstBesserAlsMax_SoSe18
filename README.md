@@ -19,9 +19,7 @@ Erste komplette Version.
 ***********************************************
 
 Version 2.2.2:
-Performance Tests.
+Performance Tests. (Tomorrowland)
 
-- Tomorrowland Szene erneuert.
-- Test ob sie flüssig läuft.
 - Weizen und Terrain entfernt.
 - Option: Collider des Rätsels zu Rechenintensiv!
