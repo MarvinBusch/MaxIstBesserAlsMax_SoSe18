@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Das Script wird benutzt um die Kopfbewegung und damit die Entscheidung zu überprüfen.
 public class Nodding : MonoBehaviour {
 
 	private Vector3[] angles;
@@ -23,12 +24,14 @@ public class Nodding : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (ActivateHead) {
-			myTime += Time.deltaTime;
-			angles [index] = transform.eulerAngles;
-			index++;
-			if (index == 60*Duration) {
-				CheckMovement ();
+		if (ActivateHead) {									// Wenn eine Entscheidung gefordert ist:
+			myTime += Time.deltaTime;						
+			angles [index] = transform.eulerAngles;			// pro Frame wird die aktuelle Position der Kamera in einen Array gespeichert
+			index++;										// (Das Script liegt auf der Kamera.)
+
+			if (index == 60 * Duration) {					// 
+				
+				CheckMovement ();							// 
 				switch (choice) {
 				case 0:
 					print ("Response = Yes");

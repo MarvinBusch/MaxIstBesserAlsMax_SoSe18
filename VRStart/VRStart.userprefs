@@ -1,13 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Assets\RadioScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\DisplayTime.cs">
     <Files>
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" Line="27" Column="29" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\BrueckenOeffnen.cs" Line="17" Column="16" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Tomorrowland\SpielManager.cs" Line="51" Column="57" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" Line="25" Column="37" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Assets\RadioScript.cs" Line="27" Column="56" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\StartMiniGame.cs" Line="30" Column="14" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Assets\RadioScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\KreiselScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\DisplayTime.cs" Line="21" Column="148" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

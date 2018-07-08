@@ -58,6 +58,7 @@
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_3-Utopie\HitStone.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\DisplayTime.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\EndLimbus.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\KreiselScript.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" />
@@ -347,7 +348,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>C:/Users/Marvin/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>C:/Users/marvi/Documents/MaxIstBesserAlsMax_SoSe18/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

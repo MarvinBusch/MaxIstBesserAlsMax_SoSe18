@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Das Script wird genutzt um das Radio zu bedienen.
 public class RadioScript : MonoBehaviour {
 
 	public bool Radio = false; 
@@ -12,7 +13,6 @@ public class RadioScript : MonoBehaviour {
 	public float FadeDuration = 0.2f;
 	float mytime;
 	float Multi = 1;
-
 
 	// Use this for initialization
 	void Start () {
@@ -33,22 +33,22 @@ public class RadioScript : MonoBehaviour {
 					Radio = true;
 				}
 				mytime = 0;
-				GetComponentInParent<BoxCollider>().enabled = true;
 			}
 		}
 
 	}
 
 	public void RadioAn(){
-		Transition = true;
-		GetComponentInParent<BoxCollider>().enabled = false;
-		if (!Radio) {
-			GetComponent<Renderer> ().material = AnMaterial;
-			Multi = 1;
-		} else {
-			RadioAus ();
+		
+		if (!Transition) {
+			Transition = true;
+			if (!Radio) {
+				GetComponent<Renderer> ().material = AnMaterial;
+				Multi = 1;
+			} else {
+				RadioAus ();
+			}
 		}
-
 	}
 
 	public void RadioAus(){
