@@ -17,11 +17,7 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 	
 	protected bool ResetMytime = false;
 	
-	public float FadeDuration = 3f;
-	
 	public GameObject AnimationObject;
-
-	public GameObject FadingScriptObject;
 
 	public void Start(){
 		SetAnimationLength();
@@ -32,20 +28,9 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 	{		
 			SaveVariable.CountTime ();
 			MyTime += Time.deltaTime;
-			if (MyTime > m_CurrentClipInfo[0].clip.length - FadeDuration)
+			if (MyTime > m_CurrentClipInfo[0].clip.length)
 			{
-				if (ResetMytime==false){
-					ResetMytime=true;
-					FadingScriptObject.GetComponent<FadeIn>().BeginFadeIng(FadeDuration);
-				Debug.Log("Fade");
-					MyTime=0;
-				}
-			}
-			if (ResetMytime==true){
-				if (MyTime>FadeDuration)
-				{
-					SaveVariable.SceneChange (scenename);
-				}
+				SaveVariable.SceneChange (scenename);
 			}
 	}
 	

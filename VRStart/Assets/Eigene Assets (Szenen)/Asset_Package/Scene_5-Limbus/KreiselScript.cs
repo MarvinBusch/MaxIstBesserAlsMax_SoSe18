@@ -10,7 +10,9 @@ public class KreiselScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (0, 0, rotate);
+	}
 
-		if (rotate >= 1f) {rotate -= Time.deltaTime / 10;}
+	public void KreiselFaellt(){
+		rotate = 5;
 	}
 }

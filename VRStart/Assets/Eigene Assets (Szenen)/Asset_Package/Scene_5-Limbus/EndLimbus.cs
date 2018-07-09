@@ -12,6 +12,8 @@ public class EndLimbus : MonoBehaviour {
 	public string sceneName= "End";
 	public float EndeNach = 15;
 	private bool AnimUnderZero = false;
+	public GameObject Kreisel;
+
 
 	void Start(){
 		GetComponent<Animator>().SetFloat("AnimationSpeed", 0);
@@ -32,8 +34,11 @@ public class EndLimbus : MonoBehaviour {
 
 		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime < 0 && !GetComponent<Animator>().IsInTransition(0)){GetComponent<Animator>().SetFloat("AnimationSpeed", PlaySpeed);AnimUnderZero = true;}
 
-		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !GetComponent<Animator>().IsInTransition(0)){SaveVariable.SceneChange (sceneName);}
+		if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !GetComponent<Animator>().IsInTransition(0) ){SaveVariable.SceneChange (sceneName);}
+
+		if(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5 && !GetComponent<Animator>().IsInTransition(0)) {Kreisel.GetComponent<KreiselScript>().KreiselFaellt();}
 	}
+		
 	public void LookAtAnimStart(){
 		if(EndeNach<=TV.GetComponent<DisplayTime>().myTime){
 			GetComponent<Animator>().SetFloat("AnimationSpeed", PlaySpeed);
