@@ -53,7 +53,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SaveVariable.letzteSzene="ElDorado";
+		//SaveVariable.letzteSzene="ElDorado";
 		if(SaveVariable.letzteSzene!=""){
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
