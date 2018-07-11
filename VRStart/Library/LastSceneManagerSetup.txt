@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Limbus.unity
+- path: Assets/Scenes/Tomorrowland.unity
   isLoaded: 1
   isActive: 1
