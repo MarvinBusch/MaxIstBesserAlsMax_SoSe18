@@ -12,7 +12,7 @@ public class TomorrowlandEnde : MonoBehaviour {
 	void Update(){
 		// Wenn Die Kugel den Collider Trifft ist Ende == True.
 		if (Ende) {
-			mytime = Time.deltaTime;							// Zeit wird hochgezählt.
+			mytime += Time.deltaTime;							// Zeit wird hochgezählt.
 			if (mytime >= WarteEnde) {							// Wartezeit abwarten.
 				SaveVariable.SceneChange ("Interrogation2");	// Szenenwechsel zurück.	
 			}

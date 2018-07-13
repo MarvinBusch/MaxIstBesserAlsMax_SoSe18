@@ -9,6 +9,7 @@ public class SaveVariable : MonoBehaviour {
 	static public float Zeit_Seit_Start = 0f;
 	static public string letzteSzene = "";
 	static public string aktuelleSzene = "";
+	static public int kooperation = 0;
 
 	public void SetUtopieTrue(){Utopie=true;}
 	public void SetUtopieFalse(){Utopie=false;}
@@ -23,5 +24,10 @@ public class SaveVariable : MonoBehaviour {
 
 	static public void CountTime(){
 		Zeit_Seit_Start += Time.deltaTime;
+	}
+
+	static public void SetKooperation (int koop){
+		kooperation += koop;
+		Debug.Log ("koop: " + kooperation);
 	}
 }

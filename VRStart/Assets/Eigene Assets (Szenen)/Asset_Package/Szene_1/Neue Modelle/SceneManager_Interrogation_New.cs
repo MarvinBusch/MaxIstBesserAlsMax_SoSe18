@@ -32,6 +32,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	private bool StartTuere = false;
 
 	public GameObject AudioObj;
+	public GameObject TuerSound;
 	int countAudio;
 
 
@@ -53,7 +54,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//SaveVariable.letzteSzene="ElDorado";
+		SaveVariable.letzteSzene="Start";
+		// Es wird geprüft, aus welcher Szene man in die InterrogationSzene gekommen ist.
 		if(SaveVariable.letzteSzene!=""){
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -78,6 +80,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		}
 	}
 
+	// Vorherige Szene war die StartSzene.
 	public void StartSceneSetup(){
 		Debug.Log ("S: "+SaveVariable.letzteSzene);
 		SaveVariable.Zeit_Seit_Start=0f;
@@ -154,6 +157,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		} else {
 			MyTimeHEad += Time.deltaTime;
 		}
+		// Siehe Start().
 		if (SaveVariable.letzteSzene != "") {
 			switch (SaveVariable.letzteSzene) {
 			case "Start":
@@ -185,6 +189,8 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 				StartTuere = true;
 				MenschTisch.SetActive (true);
 				MenschAnim.SetInteger ("State", 1);
+				AudioObj.GetComponent<AudioSource> ().clip = Resources.Load<AudioClip>("Schritte Sound");
+				TuerSound.GetComponent<AudioSource> ().Play ();
 			}
 			if (MyTime > DurationTuere && StartTuere == true) {
 				EndTuere = true;
@@ -264,12 +270,21 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 					switch (Kamera.GetComponent<Nodding> ().choice) {
 					case -1:
 						loadClipIntoAudio (countAudio.ToString () + "_O");
+						SaveVariable.SetKooperation (-1);
+						if (countAudio >= 2) {
+							MenschAnim.SetInteger ("State", 4);
+						}
 						break;
 					case 0:
 						loadClipIntoAudio (countAudio.ToString () + "_J");
+						SaveVariable.SetKooperation (1);
 						break;
 					case 1:
 						loadClipIntoAudio (countAudio.ToString () + "_N");
+						SaveVariable.SetKooperation (-2);
+						if (countAudio >= 2) {
+							MenschAnim.SetInteger ("State", 4);
+						}
 						break;
 					}	
 					countAudio++;
