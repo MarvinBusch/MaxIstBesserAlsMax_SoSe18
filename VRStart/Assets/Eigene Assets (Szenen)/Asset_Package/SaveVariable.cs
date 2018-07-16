@@ -15,11 +15,13 @@ public class SaveVariable : MonoBehaviour {
 	public void SetUtopieFalse(){Utopie=false;}
 
 	static public void SceneChange(string sceneName){
-		//letzteSzene = aktuelleSzene;
-		aktuelleSzene = sceneName;
+		Debug.Log (Application.loadedLevelName + " / koop: "+ kooperation);
+		if (kooperation <= -6 && Application.loadedLevelName == "Fluss") {
+			sceneName = "Interrogation2";
+		}
 		letzteSzene = Application.loadedLevelName;
 		Debug.Log ("Last Scene: " + letzteSzene + " | Aktuelle Szene: " + aktuelleSzene);
-		Application.LoadLevel(sceneName);
+		SceneManager.LoadScene (sceneName);
 	}
 
 	static public void CountTime(){

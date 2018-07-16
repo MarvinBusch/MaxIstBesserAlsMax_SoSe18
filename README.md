@@ -1,5 +1,12 @@
 ﻿# MaxIstBesserAlsMax_SoSe18
 
+***********************************************
+
+Version 2.3:
+Finale Version.
+- Interrogation animiert.
+- Kooperation beeinflusst.
+- Musik in allen Szenen.
 
 ***********************************************
 
