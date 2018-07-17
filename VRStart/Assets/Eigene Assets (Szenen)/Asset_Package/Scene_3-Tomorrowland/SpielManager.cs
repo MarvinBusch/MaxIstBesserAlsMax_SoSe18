@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpielManager : MonoBehaviour {
 
 	bool tod = true;
-	public int Leben = 3;
+	int Leben = 3;
 	Vector3 KugelPos;
 
 	public GameObject Kugel;
@@ -13,6 +13,8 @@ public class SpielManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Leben = (SaveVariable.kooperation/2 + 3);
+
 		Text.GetComponent<TextMesh>().text = "Es sind noch " + Leben.ToString() + " Versuche über";
 		KugelPos = Kugel.GetComponent<Transform> ().position;
 		Kugel.GetComponent<Rigidbody> ().isKinematic = true;

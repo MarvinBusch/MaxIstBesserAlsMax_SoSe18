@@ -9,13 +9,12 @@ public class SaveVariable : MonoBehaviour {
 	static public float Zeit_Seit_Start = 0f;
 	static public string letzteSzene = "";
 	static public string aktuelleSzene = "";
-	static public int kooperation = 0;
+	static public int kooperation = -3;
 
 	public void SetUtopieTrue(){Utopie=true;}
 	public void SetUtopieFalse(){Utopie=false;}
 
 	static public void SceneChange(string sceneName){
-		Debug.Log (Application.loadedLevelName + " / koop: "+ kooperation);
 		if (kooperation <= -6 && Application.loadedLevelName == "Fluss") {
 			sceneName = "Interrogation2";
 		}

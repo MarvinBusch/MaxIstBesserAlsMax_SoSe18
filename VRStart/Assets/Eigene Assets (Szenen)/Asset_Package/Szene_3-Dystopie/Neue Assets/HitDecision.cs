@@ -23,10 +23,13 @@ public class HitDecision : MonoBehaviour {
 	public GameObject Pfeil_mi;
 	public GameObject Pfeil_re;
 
+	float Multi_durch_koop;
+
 	void Start(){
-		Schrift_de_1.SetActive(false);												// Schrift wird deaktiviert.
-		PfeilWirdNichtAngesehen ();             									// Pfeile werden inaktiv (näheres bei der Funktion) gemacht.
-		Raumschiff.GetComponent<Animator> ().SetFloat ("PlayMulti", 1f);			// Die Geschwindigkeit der Animationen wird auf "normal Geschwindikeit" gestellt. (Multipikator im Animator)
+		Multi_durch_koop = (((SaveVariable.kooperation + 5f) / 2f) / 3f)+0.5f;				// Kooperation hat Einfluss auf Geschwindigkeit.
+		Schrift_de_1.SetActive(false);														// Schrift wird deaktiviert.
+		PfeilWirdNichtAngesehen ();             											// Pfeile werden inaktiv (näheres bei der Funktion) gemacht.
+		Raumschiff.GetComponent<Animator> ().SetFloat ("PlayMulti", 1f * Multi_durch_koop);	// Die Geschwindigkeit der Animationen wird auf "normal Geschwindikeit" gestellt. (Multipikator im Animator)
 	}
 
 	// Wenn das Raumschiff (Collider im vorderen Rad) auf die HitBox trifft.
@@ -69,9 +72,9 @@ public class HitDecision : MonoBehaviour {
 				if(Links==true){Raumschiff.GetComponent<Animator> ().SetInteger ("State",1);Pfeil_li.GetComponent<FarbwechselPfeile> ().TotallyWatching ();}
 				if(Mitte==true){Raumschiff.GetComponent<Animator> ().SetInteger ("State",2);Pfeil_mi.GetComponent<FarbwechselPfeile> ().TotallyWatching ();}
 				if(Rechts==true){Raumschiff.GetComponent<Animator> ().SetInteger ("State",3);Pfeil_re.GetComponent<FarbwechselPfeile> ().TotallyWatching ();}
-																					// Je nachdem, welcher Pfeil ausgewählt wurde wird die Farbe des jeweiligen Pfeils verändert. Näheres im Script: "FarbwechselPfeile.cs"
-				Raumschiff.GetComponent<Animator> ().SetFloat ("PlayMulti", 1f);	// Die Animation des Fahrens wird wieder aktiviert.
-				PfeilWirdNichtAngesehen ();											// Die Entscheidung welcher Pfeil ausgewählt wurde wird wieder rückgängig gemacht.
+																									// Je nachdem, welcher Pfeil ausgewählt wurde wird die Farbe des jeweiligen Pfeils verändert. Näheres im Script: "FarbwechselPfeile.cs"
+				Raumschiff.GetComponent<Animator> ().SetFloat ("PlayMulti", 1f * Multi_durch_koop);	// Die Animation des Fahrens wird wieder aktiviert.
+				PfeilWirdNichtAngesehen ();															// Die Entscheidung welcher Pfeil ausgewählt wurde wird wieder rückgängig gemacht.
 			}
 		}
 	}

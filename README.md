@@ -2,8 +2,18 @@
 
 ***********************************************
 
+Version 2.4:
+PräsentationsVersion
+
+- Interrogation Bugfix:
+    - Pistole schwebt nicht mehr bei zweimal "Nein".
+	- Kooperation wird bei Neustart wieder zurückgesetzt
+- Kooperation beeinflusst auch die Mini-Games.
+
+***********************************************
+
 Version 2.3:
-Finale Version.
+Alles implementert
 - Interrogation animiert.
 - Kooperation beeinflusst.
 - Musik in allen Szenen.

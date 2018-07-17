@@ -89,7 +89,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 			Magazin.transform.localEulerAngles = new Vector3 (0, 50, -90);
 			Kugel.transform.localEulerAngles = new Vector3 (0, 140, 0);
 
-			if (SaveVariable.kooperation <= -6) {
+			if (SaveVariable.letzteSzene == "Fluss") {
 				Pistole.transform.localPosition = new Vector3 (-3.029f, 4.693f, 5.495f);
 				Pistole.transform.localEulerAngles = new Vector3 (-31.254f, -124.0f, 89.0f);
 			}else{
@@ -127,6 +127,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 	public void StartSceneSetup(){
 		Debug.Log ("S: "+SaveVariable.letzteSzene);
 		SaveVariable.Zeit_Seit_Start=0f;
+		SaveVariable.SetKooperation (0);
 		brightness = Flare.GetComponent<LensFlare>().brightness;
 		Flare.GetComponent<Light>().intensity = 0f;
 		Flare.GetComponent<LensFlare>().brightness = 0f;
@@ -225,7 +226,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 			MyTimeHEad += Time.deltaTime;
 		}
 
-		if (SaveVariable.kooperation<=-2 && !PistolenLicht.GetComponent<Light> ().enabled && SaveVariable.kooperation >-6) {
+		if (SaveVariable.kooperation<=-2 && SaveVariable.letzteSzene != "Fluss" && !PistolenLicht.GetComponent<Light> ().enabled) {
 			Debug.Log ("Licht An");
 			PistolenLicht.GetComponent<Light> ().enabled = true;
 		}
