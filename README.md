@@ -1,9 +1,14 @@
 ﻿# MaxIstBesserAlsMax_SoSe18
+***********************************************
+
+Version 2.4.1:
+PräsentationsVersion 18.07.2018
+
+- Screenshots im Apspann.
 
 ***********************************************
 
 Version 2.4:
-PräsentationsVersion
 
 - Interrogation Bugfix:
     - Pistole schwebt nicht mehr bei zweimal "Nein".
