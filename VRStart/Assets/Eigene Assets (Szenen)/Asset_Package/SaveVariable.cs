@@ -9,7 +9,7 @@ public class SaveVariable : MonoBehaviour {
 	static public float Zeit_Seit_Start = 0f;
 	static public string letzteSzene = "";
 	static public string aktuelleSzene = "";
-	static public int kooperation = -3;
+	static public int kooperation = 0;
 
 	public void SetUtopieTrue(){Utopie=true;}
 	public void SetUtopieFalse(){Utopie=false;}
