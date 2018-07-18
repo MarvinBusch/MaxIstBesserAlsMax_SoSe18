@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Dieses Script speichert die Variablen, die wärend des Laufens über die Szenenwechsel hin erhalten bleiben müssen. 
+
 public class SaveVariable : MonoBehaviour {
 
 	static public bool Utopie = true;
@@ -15,7 +17,8 @@ public class SaveVariable : MonoBehaviour {
 	public void SetUtopieFalse(){Utopie=false;}
 
 	static public void SceneChange(string sceneName){
-		if (kooperation <= -6 && Application.loadedLevelName == "Fluss") {
+		// Wenn man nicht ausreichend kooperiert, wird man in der Interrogation erschossen.
+		if (kooperation <= -6 && Application.loadedLevelName == "Fluss") {	
 			sceneName = "Interrogation2";
 		}
 		letzteSzene = Application.loadedLevelName;

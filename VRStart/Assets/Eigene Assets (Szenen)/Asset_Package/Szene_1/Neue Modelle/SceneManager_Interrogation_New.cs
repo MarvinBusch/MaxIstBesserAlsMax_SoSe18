@@ -589,6 +589,7 @@ public class SceneManager_Interrogation_New : MonoBehaviour {
 		Collides = false;
 	}
 
+	// Audio wird aus dem Ressourcen Ordner in die Quelle geladen um abgespielt zu werden.
 	void loadClipIntoAudio(string NewAudio){
 		string fileName = "Text_Inter/" + NewAudio;
 		AudioObj.GetComponent<AudioSource> ().clip = Resources.Load<AudioClip>(fileName);

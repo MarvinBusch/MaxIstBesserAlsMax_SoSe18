@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-
+// Die Bilrschirme Werden beim Ansehen vergrößert.
 public class ScreenBig : MonoBehaviour {
 
 	public float MyTime = 0f;

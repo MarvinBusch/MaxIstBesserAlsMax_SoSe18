@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Zeigt die Zeit auf dem Display im Limbus an.
 public class DisplayTime : MonoBehaviour {
 
 	public float myTime = 0f;

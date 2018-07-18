@@ -1,13 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs">
     <Files>
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Assets\RadioScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\KreiselScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\DisplayTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" Line="229" Column="114" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\KreiselScript.cs" Line="24" Column="15" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Scene_5-Limbus\DisplayTime.cs" Line="5" Column="48" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Neue Modelle\SceneManager_Interrogation_New.cs" Line="592" Column="83" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\SaveVariable.cs" Line="34" Column="23" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\HitDecision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\End\GlobeDrehen.cs" Line="6" Column="110" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Nodding.cs" Line="55" Column="40" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SceneControllInterrogation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" Line="6" Column="51" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\StartMiniGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\HitSuccess.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\FarbwechselPfeile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_3-Dystopie\Neue Assets\CompassRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

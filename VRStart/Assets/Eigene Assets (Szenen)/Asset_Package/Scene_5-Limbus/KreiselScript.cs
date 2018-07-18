@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class KreiselScript : MonoBehaviour {
 
-
 	float rotate;
 	public float start, fallen;
 	bool drehen = true;
-		
 
 	void Start(){
 		rotate = start;

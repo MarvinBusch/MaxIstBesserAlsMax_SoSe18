@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Das Script dreht den Globus. 
+// Hierbei werden Oben, Unten und die Mitte mit unterschiedlichen Geschwundigkeiten und unterschiedlichen Richtungen.
+
 public class GlobeDrehen : MonoBehaviour {
 
 	public Transform Namen;
